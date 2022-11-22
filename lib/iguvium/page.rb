@@ -14,7 +14,7 @@ module Iguvium
     # @param page [PDF::Reader::Page]
     # @param (see Iguvium.read)
     # Typically you don't need it, prefer {Page} creation from {Iguvium.read}
-    def initialize(page, path, **opts)
+    def initialize(page, path, opts = {})
       @opts = opts
       @reader_page = page
       @path = path

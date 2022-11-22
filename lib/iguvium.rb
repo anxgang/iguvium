@@ -57,7 +57,7 @@ module Iguvium
     # This typically makes sense in a rare case when table grid in your pdf is filled with
     # rasterized texture or is actually a background picture. Usually you don't want to use it.
     #
-    def read(path, **opts)
+    def read(path, opts = {})
       if windows?
         unless opts[:gspath]
           gspath = Dir.glob('C:/Program Files/gs/gs*/bin/gswin??c.exe').first.tr('/', '\\')

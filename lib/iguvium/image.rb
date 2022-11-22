@@ -14,7 +14,7 @@ module Iguvium
     #   like C:/Program Files/gs/gs*/bin/gswin??c.exe on Windows or just gs on Mac and Linux
     #
     # @return [ChunkyPNG::Image]
-    def self.read(path, pagenumber = 1, **opts)
+    def self.read(path, pagenumber = 1, opts = {})
       puts path.shellescape
       rgb = path.gsub(/\.pdf$/, '.rgb')
       Iguvium.logger.info `#{opts[:gspath]} -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pnggray -dGraphicsAlphaBits=4 \
